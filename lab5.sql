@@ -1,0 +1,30 @@
+USE lab2;
+
+# Cheat sheet for reference:
+# ALTER TABLE tablename DROP FOREIGN KEY keyname_FK2;
+# ALTER TABLE tablename DROP INDEX keyname_FK2;
+# ALTER TABLE tablename DROP PRIMARY KEY;
+
+
+# Drop the keys:
+ALTER TABLE Order_T DROP FOREIGN KEY Order_FK1;
+ALTER TABLE OrderLine_T DROP FOREIGN KEY OrderLine_FK1;
+ALTER TABLE OrderLine_T DROP FOREIGN KEY OrderLine_FK2;
+
+
+ALTER TABLE Customer_T DROP PRIMARY KEY;
+ALTER TABLE Order_T DROP PRIMARY KEY;
+ALTER TABLE Product_T DROP PRIMARY KEY;
+ALTER TABLE OrderLine_T DROP PRIMARY KEY;
+
+# Drop the indices:
+ALTER TABLE Order_T DROP INDEX Order_FK1;
+# ALTER TABLE OrderLine_T DROP INDEX OrderLine_FK1;
+ALTER TABLE OrderLine_T DROP INDEX OrderLine_FK2;
+
+
+
+DESCRIBE Customer_T;
+DESCRIBE Order_T;
+DESCRIBE OrderLine_T;
+DESCRIBE Product_T;
