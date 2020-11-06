@@ -1,0 +1,13 @@
+1	Mustang	1
+2	Integra	2
+3	Altima	3
+4	Taurus	1
+5	Maxima	3
+6	Camry	4
+7	Civic	5
+8	Celica	4
+9	Accord	5
+10	Crown Victoria	1
+11	Ranger	1
+12	Aveo	6
+13	Cobalt	6

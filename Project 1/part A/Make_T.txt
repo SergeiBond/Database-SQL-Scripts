@@ -1,0 +1,6 @@
+1	Ford	Dearborn, MI
+2	Acura	Minato, Japan
+3	Nissan	Yokohama, Japan
+4	Toyota	Toyota, Japan
+5	Honda	Minato, Japan
+6	Chevrolet	Detroit, MI

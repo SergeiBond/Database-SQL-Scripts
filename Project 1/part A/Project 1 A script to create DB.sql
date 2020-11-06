@@ -1,0 +1,52 @@
+DROP DATABASE IF EXISTS project1;
+
+CREATE DATABASE IF NOT EXISTS project1;
+
+USE project1;
+
+
+
+CREATE TABLE IF NOT EXISTS Color_T
+(
+ColorID int NOT NULL,
+ColorName varchar(20),
+CONSTRAINT Color_PK PRIMARY KEY (ColorID)
+);
+
+CREATE TABLE IF NOT EXISTS Make_T
+(
+MakeID int NOT NULL,
+MakeName varchar(20),
+MakeHQ varchar(50),
+CONSTRAINT Make_PK PRIMARY KEY (MakeID)
+);
+
+CREATE TABLE IF NOT EXISTS Model_T
+(
+ModelID int NOT NULL,
+ModelName varchar(20),
+MakeID int,
+CONSTRAINT Model_PK PRIMARY KEY (ModelID),
+CONSTRAINT Model_FK1 FOREIGN KEY (MakeID) REFERENCES
+Make_T(MakeID)
+);
+
+
+CREATE TABLE IF NOT EXISTS Car_T
+(
+CarID int NOT NULL,
+ModelID int,
+ColorID int,
+CarVIN varchar(17),
+CarMileage int,
+CONSTRAINT Car_PK PRIMARY KEY (CarID),
+CONSTRAINT Car_FK1 FOREIGN KEY (ModelID) REFERENCES
+Model_T(ModelID),
+CONSTRAINT Car_FK2 FOREIGN KEY (ColorID) REFERENCES
+Color_T(ColorID)
+);
+
+DESCRIBE Car_T;
+DESCRIBE Model_T;
+DESCRIBE Make_T;
+DESCRIBE Color_T;
